@@ -3,8 +3,6 @@ package seedu.addressbook.data.person;
 public class Street {
 	private boolean isPrivate;
 	private String value;
-	public static final String EXAMPLE = "123, some street";
-	public static final String MESSAGE_BLOCK_CONSTRAINTS = "Block ";
 
 	public Street(String street, boolean isPrivate) {
 		this.isPrivate = isPrivate;
