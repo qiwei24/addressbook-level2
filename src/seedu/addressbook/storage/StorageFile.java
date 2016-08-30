@@ -69,6 +69,12 @@ public class StorageFile {
             throw new InvalidStorageFilePathException("Storage file should end with '.txt'");
         }
     }
+    
+    public boolean isFileExist(){
+    	File file = new File(DEFAULT_STORAGE_FILEPATH);
+    	return file.exists(); 
+    }
+    
 
     /**
      * Returns true if the given path is acceptable as a storage file.
