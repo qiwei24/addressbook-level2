@@ -115,6 +115,7 @@ public class Main {
 	 * @param command
 	 *            user command
 	 * @return result of the command
+	 * catch storagefilenotfoundexception here 
 	 */
 	private CommandResult executeCommand(Command command) {
 		try {
@@ -123,7 +124,7 @@ public class Main {
 			if (!storage.isFileExist()) {
 				throw new StorageFileNotFoundException();
 			}
-			storage.save(addressBook);
+			storage.save(addressBook);3
 			return result;
 		} catch (Exception e) {
 			ui.showToUser(e.getMessage());

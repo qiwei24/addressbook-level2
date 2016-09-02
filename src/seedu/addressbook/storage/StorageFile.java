@@ -88,6 +88,7 @@ public class StorageFile {
      * Saves all data to this storage file.
      *
      * @throws StorageOperationException if there were errors converting and/or storing data to file.
+     * throw StorageNotFoundException here and catch it in execute command
      */
     public void save(AddressBook addressBook) throws StorageOperationException {
 
