@@ -12,4 +12,11 @@ public class NameTest {
         Name nameTest = new Name("Qi Wei");
         assertEquals(false, nameTest.isSimilar(null));
     }
+    
+    @Test
+    public void isSimilar_sameName_returnTrue() throws IllegalValueException{
+        Name name1 = new Name("Qi Wei");
+        Name name2 = new Name("Qi Wei");
+        assertEquals(true, name1.isSimilar(name2));
+    }
 }
