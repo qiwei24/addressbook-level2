@@ -26,4 +26,11 @@ public class NameTest {
         Name name2 = new Name("Qi wei");
         assertEquals(true, name1.isSimilar(name2));
     }
+    
+    @Test
+    public void isSimilar_sameNameDifferentOrder_returnTrue() throws IllegalValueException{
+        Name name1 = new Name("Goh Qi Wei");
+        Name name2 = new Name("Qi Wei Goh");
+        assertEquals(true, name1.isSimilar(name2));
+    }
 }
