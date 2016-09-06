@@ -63,15 +63,15 @@ public class Name {
     
     /**
      * Returns true of the other name is very similar to this name.
-     * Two names are considered similar if the name are similar
+     * Two names are considered similar if the name are similar and also
+     * when the other name is null, in a different letter case, in a different order 
      */
      public boolean isSimilar(Name other) { 
          if(other == null)
              return false;
-         if(this.fullName.toLowerCase().equals(other.fullName.toLowerCase()))
-             return true;
-         
-         return false;
+         List<String> currNameList = Arrays.asList(this.fullName.toLowerCase().split(" "));
+         List<String> otherNameList = Arrays.asList(other.fullName.toLowerCase().split(" "));
+        
+         return currNameList.containsAll(otherNameList);
      }
-
 }
