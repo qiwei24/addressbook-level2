@@ -19,4 +19,11 @@ public class NameTest {
         Name name2 = new Name("Qi Wei");
         assertEquals(true, name1.isSimilar(name2));
     }
+    
+    @Test 
+    public void isSimilar_sameNameDifferentCase_returnTrue() throws IllegalValueException{
+        Name name1 = new Name("Qi Wei");
+        Name name2 = new Name("Qi wei");
+        assertEquals(true, name1.isSimilar(name2));
+    }
 }
